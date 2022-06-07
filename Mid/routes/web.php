@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\StudentController;
+use App\Models\Student;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/student/all',[StudentController::class,'list'])->name("student.list");
-Route::get('/welcome',[StudentController::class, 'welcome'])->name("student.welcome");
+Route::get('/', [StudentController::class,'reg'])->name("students.reg");
+Route::post('/students.reg',[StudentController::class,'regSubmit'])->name('students.reg.submit');
+Route::get('/students/list',[StudentController::class,'list'])->name("students.list");
+Route::get('/students.details/{id}', [StudentController::class, 'details'])->name('students.details');
