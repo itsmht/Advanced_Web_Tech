@@ -1,19 +1,19 @@
 <?php
 
 namespace App\Models;
-use App\Models\Department;
+use App\Models\Student;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Student extends Model
+class Department extends Model
 {
     use HasFactory;
-    protected $table = "student";
+    protected $table = "department";
     protected $primarykey = "id";
     public $incrementing = true;
     public $timestamp = false;
-    function department()
+    function students()
     {
-        return $this->belongsTo(Department::class, 'dept_id', 'dept_id');
+        return $this->hasMany(Student::class, 'dept_id', 'dept_id');
     }
 }
