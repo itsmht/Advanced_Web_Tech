@@ -11,16 +11,16 @@ class Department extends Model
 {
     use HasFactory;
     protected $table = "department";
-    protected $primarykey = "dept_id";
-    public $incrementing = true;
-    public $timestamp = false;
+   // protected $primarykey = "dept_id";
+    //public $incrementing = true;
+    //public $timestamp = false;
     function student()
     {
         return $this->hasMany(Student::class, 'dept_id', 'dept_id');
     }
     function teacher()
     {
-        return $this->hasMany(Student::class, 'dept_id', 'dept_id');
+        return $this->hasMany(Teacher::class, 'dept_id', 'dept_id');
     }
     function course()
     {

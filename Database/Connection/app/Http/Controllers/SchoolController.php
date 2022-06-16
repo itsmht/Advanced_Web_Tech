@@ -9,8 +9,8 @@ class SchoolController extends Controller
 {
     function info()
     {
-        $all = Department::all();
+        $d = Department::all();
         return view('info')
-                ->with('all', $all);
+                ->with('d', $d);
     }
 }

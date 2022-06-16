@@ -8,12 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-    protected $table = "student";
-    protected $primarykey = "id";
-    public $incrementing = true;
-    public $timestamp = false;
-    function department()
-    {
-        return $this->belongsTo(Department::class, 'dept_id', 'dept_id');
-    }
+    
 }

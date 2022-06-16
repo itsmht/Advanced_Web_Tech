@@ -20,6 +20,6 @@ class TeacherCourse extends Model
     }
     public function teacher()
     {
-        return $this->belongsTo(TeacherCourse::class,'teacher_id','teacher_id');
+        return $this->belongsTo(Teacher::class,'teacher_id','teacher_id');
     }
 }

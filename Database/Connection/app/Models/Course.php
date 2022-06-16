@@ -5,6 +5,7 @@ use App\Models\StudentCourse;
 use App\Models\TeacherCourse;
 use App\Models\Student;
 use App\Models\Department;
+use App\Models\Teacher;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
